@@ -487,7 +487,8 @@
         }
       }
       window.addEventListener('message', e => {
-        console.log(e)
+
+        console.log('received message from audioplayer:',e)
         const key = e.message ? 'message' : 'data';
         const data = e[key];
 			  console.log('e[message]:',e.message,'e[data]',e.data,'e.playing',e.playing)
