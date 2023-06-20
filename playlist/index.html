@@ -488,8 +488,7 @@
       }
 
       console.log('attempting to set message listener')
-      var source = new EventSource("*");
-      source.onmessage = function(e) {
+      window.addEventListener(function(e) {
 
         console.log('received message from audioplayer:',e)
         const key = e.message ? 'message' : 'data';
@@ -503,7 +502,7 @@
             userInteracted = true
           break
         }
-      }
+      }, false)
 
       toggleShuffle=e=>{
         shuffle = e.checked
