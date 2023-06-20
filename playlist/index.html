@@ -489,7 +489,7 @@
 
       console.log('attempting to set message listener')
       var source = new EventSource("/index.html");
-      source.onmessage = function(event) {
+      source.onmessage = function(e) {
 
         console.log('received message from audioplayer:',e)
         const key = e.message ? 'message' : 'data';
