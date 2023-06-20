@@ -486,7 +486,7 @@
           el.contentWindow.postMessage(msg, '*')
         }
       }
-      window.addEventListener('message', e => {
+      window.onmessage = e => {
 
         console.log('received message from audioplayer:',e)
         const key = e.message ? 'message' : 'data';
@@ -500,7 +500,7 @@
             userInteracted = true
           break
         }
-      },false);
+      }
 
       toggleShuffle=e=>{
         shuffle = e.checked
