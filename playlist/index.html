@@ -490,6 +490,7 @@
         console.log(e)
         const key = e.message ? 'message' : 'data';
         const data = e[key];
+			  console.log('e[message]:',e.message,'e[data]',e.data,'e.playing',e.playing)
         switch(data){
           case 'ended':
             playTrack(shuffle ? nextRnd : curIDX=(curIDX+1)%tracks.length)
